@@ -15,7 +15,12 @@ describe:
 		--stack-name $(stack_name) \
 		--query Stacks[0].Outputs
 
+delete:
+	sam delete \
+		--stack-name $(stack_name)
+
 .PHONY: \
 	deploy \
-	describe
+	describe \
+	delete
 
